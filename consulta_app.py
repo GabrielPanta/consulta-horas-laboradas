@@ -59,7 +59,7 @@ if st.button("Consultar"):
 
             # Calcular total solo de valores numéricos
             df["horas_num"] = pd.to_numeric(df["horas_trabajadas"], errors='coerce').fillna(0)
-            total_horas = df["horas_num"].sum()
+            total_horas = round(df["horas_num"].sum(), 2)
             
             # Mostrar nombre del trabajador
             nombre_trabajador = df["nombre"].iloc[0]
